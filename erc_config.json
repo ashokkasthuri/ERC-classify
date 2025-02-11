@@ -1,0 +1,784 @@
+{
+    "ERC20": {
+        "selectors": [
+            "dd62ed3e",
+            "095ea7b3",
+            "70a08231",
+            "18160ddd",
+            "a9059cbb",
+            "23b872dd"
+        ],
+        "topics": [
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+        ],
+        "functions": {
+            "allowance(address,address)": "dd62ed3e",
+            "approve(address,uint256)": "095ea7b3",
+            "balanceOf(address)": "70a08231",
+            "totalSupply()": "18160ddd",
+            "transfer(address,uint256)": "a9059cbb",
+            "transferFrom(address,address,uint256)": "23b872dd"
+        },
+        "events": {
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": "event Approval(address,address,uint256)",
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": "event Transfer(address,address,uint256)"
+        }
+    },
+    "ERC721": {
+        "selectors": [
+            "095ea7b3",
+            "70a08231",
+            "081812fc",
+            "e985e9c5",
+            "6352211e",
+            "42842e0e",
+            "b88d4fde",
+            "a22cb465",
+            "01ffc9a7",
+            "23b872dd"
+        ],
+        "topics": [
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+            "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31",
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+        ],
+        "functions": {
+            "approve(address,uint256)": "095ea7b3",
+            "balanceOf(address)": "70a08231",
+            "getApproved(uint256)": "081812fc",
+            "isApprovedForAll(address,address)": "e985e9c5",
+            "ownerOf(uint256)": "6352211e",
+            "safeTransferFrom(address,address,uint256)": "42842e0e",
+            "safeTransferFrom(address,address,uint256,bytes)": "b88d4fde",
+            "setApprovalForAll(address,bool)": "a22cb465",
+            "supportsInterface(bytes4)": "01ffc9a7",
+            "transferFrom(address,address,uint256)": "23b872dd"
+        },
+        "events": {
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": "event Approval(address,address,uint256)",
+            "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31": "event ApprovalForAll(address,address,bool)",
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": "event Transfer(address,address,uint256)"
+        }
+    },
+    "ERC1155": {
+        "selectors": [
+            "00fdd58e",
+            "4e1273f4",
+            "e985e9c5",
+            "2eb2c2d6",
+            "f242432a",
+            "a22cb465",
+            "01ffc9a7"
+        ],
+        "topics": [
+            "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31",
+            "0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb",
+            "0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62",
+            "0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b"
+        ],
+        "functions": {
+            "balanceOf(address,uint256)": "00fdd58e",
+            "balanceOfBatch(address[],uint256[])": "4e1273f4",
+            "isApprovedForAll(address,address)": "e985e9c5",
+            "safeBatchTransferFrom(address,address,uint256[],uint256[],bytes)": "2eb2c2d6",
+            "safeTransferFrom(address,address,uint256,uint256,bytes)": "f242432a",
+            "setApprovalForAll(address,bool)": "a22cb465",
+            "supportsInterface(bytes4)": "01ffc9a7"
+        },
+        "events": {
+            "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31": "event ApprovalForAll(address,address,bool)",
+            "0x4a39dc06d4c0dbc64b70af90fd698a233a518aa5d07e595d983b8c0526c8f7fb": "event TransferBatch(address,address,address,uint256[],uint256[])",
+            "0xc3d58168c5ae7397731d063d5bbf3d657854427343f4c083240f7aacaa2d0f62": "event TransferSingle(address,address,address,uint256,uint256)",
+            "0x6bb7ff708619ba0610cba295a58592e0451dee2622938c8755667688daf3529b": "event URI(string,uint256)"
+        }
+    },
+    "ERC165": {
+        "selectors": [
+            "01ffc9a7"
+        ],
+        "topics": [],
+        "functions": {
+            "supportsInterface(bytes4)": "01ffc9a7"
+        },
+        "events": {}
+    },
+    "ERC173": {
+        "selectors": [
+            "8da5cb5b",
+            "01ffc9a7",
+            "f2fde38b"
+        ],
+        "topics": [
+            "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0"
+        ],
+        "functions": {
+            "owner()": "8da5cb5b",
+            "supportsInterface(bytes4)": "01ffc9a7",
+            "transferOwnership(address)": "f2fde38b"
+        },
+        "events": {
+            "0x8be0079c531659141344cd1fd0a4f28419497f9722a3daafe3b4186f6b6457e0": "event OwnershipTransferred(address indexed previousOwner, address indexed newOwner)"
+        }
+    },
+    "ERC777": {
+        "selectors": [
+            "06fdde03",
+            "95d89b41",
+            "18160ddd",
+            "70a08231",
+            "9bd9bbc6",
+            "a9059cbb",
+            "959b8c3f",
+            "fad8b32a",
+            "d95b6371",
+            "62ad1b83",
+            "fe9d9303",
+            "fc673c4f",
+            "556f0dc7"
+        ],
+        "topics": [
+            "0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987",
+            "0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d",
+            "0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098",
+            "0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9",
+            "0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1"
+        ],
+        "functions": {
+            "name()": "06fdde03",
+            "symbol()": "95d89b41",
+            "totalSupply()": "18160ddd",
+            "balanceOf(address)": "70a08231",
+            "send(address,uint256,bytes)": "9bd9bbc6",
+            "transfer(address,uint256)": "a9059cbb",
+            "authorizeOperator(address)": "959b8c3f",
+            "revokeOperator(address)": "fad8b32a",
+            "isOperatorFor(address,address)": "d95b6371",
+            "operatorSend(address,address,uint256,bytes,bytes)": "62ad1b83",
+            "burn(uint256,bytes)": "fe9d9303",
+            "operatorBurn(address,uint256,bytes,bytes)": "fc673c4f",
+            "granularity()": "556f0dc7"
+        },
+        "events": {
+            "0x06b541ddaa720db2b10a4d0cdac39b8d360425fc073085fac19bc82614677987": "event Sent(address,address,address,uint256,bytes,bytes)",
+            "0x2fe5be0146f74c5bce36c0b80911af6c7d86ff27e89d5cfa61fc681327954e5d": "event Minted(address,address,uint256,bytes,bytes)",
+            "0xa78a9be3a7b862d26933ad85fb11d80ef66b8f972d7cbba06621d583943a4098": "event Burned(address,address,uint256,bytes,bytes)",
+            "0xf4caeb2d6ca8932a215a353d0703c326ec2d81fc68170f320eb2ab49e9df61f9": "event AuthorizedOperator(address,address)",
+            "0x50546e66e5f44d728365dc3908c63bc5cfeeab470722c1677e3073a6ac294aa1": "event RevokedOperator(address,address)"
+        }
+    },
+    "ERC2981": {
+        "selectors": [
+            "2a55205a"
+        ],
+        "topics": [],
+        "functions": {
+            "royaltyInfo(uint256,uint256)": "2a55205a"
+        },
+        "events": {}
+    },
+    "ERC223": {
+        "selectors": [
+            "be45fd62",
+            "8943ec02"
+        ],
+        "topics": [
+            "0xe19260aff97b920c7df27010903aeb9c8d2be5d310a2c67824cf3f15396e4c16"
+        ],
+        "functions": {
+            "transfer(address,uint256,bytes)": "be45fd62",
+            "tokenReceived(address,uint256,bytes)": "8943ec02"
+        },
+        "events": {
+            "0xe19260aff97b920c7df27010903aeb9c8d2be5d310a2c67824cf3f15396e4c16": "event Transfer(address indexed from, address indexed to, uint256 value, bytes data)"
+        }
+    },
+    "ERC884": {
+        "selectors": [
+            "cc397ed3",
+            "2da7293e",
+            "197bc336",
+            "1aab9a9f",
+            "b9209e33",
+            "d4d7b19a",
+            "f3221c7f",
+            "47089f62",
+            "4487b392",
+            "354b7b1d",
+            "79f64720"
+        ],
+        "topics": [
+            "0x805684f3867fc798d2f8039e5640262695b7638ff9b73e9ad1883bc1479bcb47",
+            "0x9f6abe5373553e0f70823cbe69b7008c9eca4b603130a00a7c28ef901dc5a228",
+            "0xe3faf1283bfbece314403aa9d960aaa3c2271513e025bd01956dd135afb1fcd4",
+            "0x9894d458cf29e8bc4eb7e591bac54b31dc90125dfa852474419972ab4347dd12",
+            "0xd9bc583d1445615d8b795b7374f03ff79efa83b6359a91331efd95e4cf023ab6"
+        ],
+        "functions": {
+            "getCurrentFor(address)": "cc397ed3",
+            "isSuperseded(address)": "2da7293e",
+            "holderAt(uint256)": "197bc336",
+            "holderCount()": "1aab9a9f",
+            "isVerified(address)": "b9209e33",
+            "isHolder(address)": "d4d7b19a",
+            "hasHash(address,bytes32)": "f3221c7f",
+            "addVerified(address,bytes32)": "47089f62",
+            "removeVerified(address)": "4487b392",
+            "updateVerified(address,bytes32)": "354b7b1d",
+            "cancelAndReissue(address,address)": "79f64720"
+        },
+        "events": {
+            "0x805684f3867fc798d2f8039e5640262695b7638ff9b73e9ad1883bc1479bcb47": "event VerifiedAddressAdded(address,bytes32)",
+            "0x9f6abe5373553e0f70823cbe69b7008c9eca4b603130a00a7c28ef901dc5a228": "event VerifiedAddressRemoved(address)",
+            "0xe3faf1283bfbece314403aa9d960aaa3c2271513e025bd01956dd135afb1fcd4": "event VerifiedAddressUpdated(address,bytes32)",
+            "0x9894d458cf29e8bc4eb7e591bac54b31dc90125dfa852474419972ab4347dd12": "event HolderAdded(address)",
+            "0xd9bc583d1445615d8b795b7374f03ff79efa83b6359a91331efd95e4cf023ab6": "event HolderRemoved(address)"
+        }
+    },
+    "ERC998": {
+        "selectors": [
+            "45d5861e",
+            "7eab98b6",
+            "1389d2cd",
+            "ba6b5f96",
+            "1d98f3c5",
+            "150b7a02",
+            "eadb80b8",
+            "0d5a621b",
+            "de567202",
+            "ed81cdda",
+            "43a61a8e"
+        ],
+        "topics": [
+            "0x2e30d0e2a76929c813984e8611a09b0488d189f78b44622aea577ceae98de6ae",
+            "0x0371ddf2288ad1ba92626a7e31c86a9d006e592cfe57d7d946ef08b13457c08b"
+        ],
+        "functions": {
+            "transferChild(uint256,address,uint256)": "45d5861e",
+            "safeTransferChild(uint256,address,uint256,bytes)": "7eab98b6",
+            "transferChildToParent(address,uint256,address,uint256,uint256,bytes)": "1389d2cd",
+            "getChild(address,uint256,address,uint256)": "ba6b5f96",
+            "safeTransferChild(uint256,address,address,uint256)": "1d98f3c5",
+            "onERC721Received(address,address,uint256,bytes)": "150b7a02",
+            "ownerOfChild(address,uint256)": "eadb80b8",
+            "childContractByIndex(uint256,uint256)": "0d5a621b",
+            "childTokenByIndex(uint256,uint256)": "de567202",
+            "rootOwnerOfChild(address,uint256)": "ed81cdda",
+            "rootOwnerOf(uint256)": "43a61a8e"
+        },
+        "events": {
+            "0x2e30d0e2a76929c813984e8611a09b0488d189f78b44622aea577ceae98de6ae": "event TransferChild(uint256,address,uint256)",
+            "0x0371ddf2288ad1ba92626a7e31c86a9d006e592cfe57d7d946ef08b13457c08b": "event ReceivedChild(address,uint256,address,uint256)"
+        }
+    },
+    "ERC1363": {
+        "selectors": [
+            "1296ee62",
+            "4000aea0",
+            "d8fbe994",
+            "c1d34b89",
+            "3177029f",
+            "cae9ca51",
+            "88a7ca5c",
+            "7b04a2d0"
+        ],
+        "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925"
+        ],
+        "functions": {
+            "transferAndCall(address,uint256)": "1296ee62",
+            "transferAndCall(address,uint256,bytes)": "4000aea0",
+            "transferFromAndCall(address,address,uint256)": "d8fbe994",
+            "transferFromAndCall(address,address,uint256,bytes)": "c1d34b89",
+            "approveAndCall(address,uint256)": "3177029f",
+            "approveAndCall(address,uint256,bytes)": "cae9ca51",
+            "onTransferReceived(address,address,uint256,bytes)": "88a7ca5c",
+            "onApprovalReceived(address,uint256,bytes)": "7b04a2d0"
+        },
+        "events": {
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": "event Transfer(address,address,uint256)",
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": "event Approval(address,address,uint256)"
+        }
+    },
+    "ERC875": {
+        "selectors": [
+            "06fdde03",
+            "95d89b41",
+            "70a08231",
+            "2b4e4e96",
+            "fe60ebdc",
+            "18160ddd",
+            "6352211e",
+            "7a230791"
+        ],
+        "topics": [
+            "0x352c35c940f761a74208a0d0d979db13737cd7bf2543000d3749af518325f301",
+            "0xba051478ecc3a9bc42c7dcb2e322d2ee1e6652a610ea951710e5e9dddb80a89c"
+        ],
+        "functions": {
+            "name()": "06fdde03",
+            "symbol()": "95d89b41",
+            "balanceOf(address)": "70a08231",
+            "transfer(address,uint256[])": "2b4e4e96",
+            "transferFrom(address,address,uint256[])": "fe60ebdc",
+            "totalSupply()": "18160ddd",
+            "ownerOf(uint256)": "6352211e",
+            "trade(uint256,uint256[],uint8,bytes32,bytes32)": "7a230791"
+        },
+        "events": {
+            "0x352c35c940f761a74208a0d0d979db13737cd7bf2543000d3749af518325f301": "event Transfer(address,address,uint256[])",
+            "0xba051478ecc3a9bc42c7dcb2e322d2ee1e6652a610ea951710e5e9dddb80a89c": "event Trade(uint256,uint256[],uint8,bytes32,bytes32)"
+        }
+    },
+    "ERC1046": {
+        "selectors": [
+            "3c130d90"
+        ],
+        "topics": [],
+        "functions": {
+            "tokenURI()": "3c130d90"
+        },
+        "events": {}
+    },
+    "ERC2612": {
+        "selectors": [
+            "d505accf",
+            "7ecebe00",
+            "3644e515"
+        ],
+        "topics": [
+            "0xaa0501e5e80cba255794aa8e245e2cf7b57401397d6837fd31fb38bbb8ca8a41"
+        ],
+        "functions": {
+            "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)": "d505accf",
+            "nonces(address)": "7ecebe00",
+            "DOMAIN_SEPARATOR()": "3644e515"
+        },
+        "events": {
+            "0xaa0501e5e80cba255794aa8e245e2cf7b57401397d6837fd31fb38bbb8ca8a41": "event Permit(address indexed owner, address indexed spender, uint256 value, uint256 deadline, uint8 v, bytes32 r, bytes32 s)"
+        }
+    },
+    "ERC1948": {
+        "selectors": [
+            "37ebbc03",
+            "9b8a7c28"
+        ],
+        "topics": [
+            "0xafb23568ae6059f6e3fed58aec1da207f640a0e232f2c86b8ba2e2a80fe5c1cb"
+        ],
+        "functions": {
+            "readData(uint256)": "37ebbc03",
+            "writeData(uint256,bytes)": "9b8a7c28"
+        },
+        "events": {
+            "0xafb23568ae6059f6e3fed58aec1da207f640a0e232f2c86b8ba2e2a80fe5c1cb": "event DataUpdated(uint256 indexed tokenId, bytes data)"
+        }
+    },
+    "ERC1261": {
+        "selectors": [
+            "e2315a29",
+            "c5ae086a",
+            "8cccf809",
+            "a230c524",
+            "06fdde03",
+            "95d89b41"
+        ],
+        "topics": [
+            "0xc9df37c9640ee7770b8415e60fe3b412e9b9491ea7f7f396964d875181fdb961",
+            "0xdb4f86f4e3926c467d3434a00cc562d038163012ae34dcc94fca7c85246f1bbe"
+        ],
+        "functions": {
+            "addMember(address,uint256[])": "e2315a29",
+            "revokeMembership(address)": "c5ae086a",
+            "getMemberRoles(address)": "8cccf809",
+            "isMember(address)": "a230c524",
+            "name()": "06fdde03",
+            "symbol()": "95d89b41"
+        },
+        "events": {
+            "0xc9df37c9640ee7770b8415e60fe3b412e9b9491ea7f7f396964d875181fdb961": "event MemberAdded(address,uint256[])",
+            "0xdb4f86f4e3926c467d3434a00cc562d038163012ae34dcc94fca7c85246f1bbe": "event MembershipRevoked(address)"
+        }
+    },
+    "ERC1337": {
+        "selectors": [
+            "cc5a35b4",
+            "cdd6dc6f",
+            "711e6351",
+            "e6769e29",
+            "c8d28e5a",
+            "78d1899e"
+        ],
+        "topics": [
+            "0x844d09475636c6c07231475c36c6b7dfccedd9064216bda7e75dcc0f02e1ff99",
+            "0xe222d6f77b9359481359760f9e32ba9e0ef1c7d8d6e00586d590284639d77f68"
+        ],
+        "functions": {
+            "modifyStatus(uint256,uint8,bytes)": "cc5a35b4",
+            "executeSubscription(address,uint256,bytes,uint8,uint256,uint256,uint256,address,bytes,bytes)": "cdd6dc6f",
+            "isValidSubscription(uint256)": "711e6351",
+            "getSubscriptionStatus(uint256)": "e6769e29",
+            "getSubscriptionHash(address,uint256,bytes,uint8,uint256,uint256,uint256,address,bytes)": "c8d28e5a",
+            "getModifyStatusHash(bytes32,uint8)": "78d1899e"
+        },
+        "events": {
+            "0x844d09475636c6c07231475c36c6b7dfccedd9064216bda7e75dcc0f02e1ff99": "event SubscriptionExecuted(address,uint256,bytes,uint8,uint256,uint256,uint256,address,bytes,bytes)",
+            "0xe222d6f77b9359481359760f9e32ba9e0ef1c7d8d6e00586d590284639d77f68": "event StatusModified(uint256,uint8,bytes)"
+        }
+    },
+    "ERC2021": {
+        "selectors": [
+            "4f6c0edf",
+            "b39832d4",
+            "30dfa9d5",
+            "0cd63006",
+            "264b44d5",
+            "da84e000",
+            "73fb44c6",
+            "b03a635f",
+            "b1a1322c",
+            "60401581",
+            "e83c4671"
+        ],
+        "topics": [
+            "0x37b873e2a280227ff2114ec5c290b4c6639c229676c828336bae981f800f4490",
+            "0x69c18c6887edb6881879660d9575dd93deaa7b9ae38bd8971b504412e7cf5137",
+            "0x3196d8e73202df6f7548a1e2abf262132f01e5d480c2284ec13e73541752dc06",
+            "0xd3eaa05f7ccd51fe10c51a6e431f433d302b9b528dfdb3e4d3e23629307349d5"
+        ],
+        "functions": {
+            "orderPayoutFrom(string,address,uint256,string)": "4f6c0edf",
+            "orderPayout(string,uint256,string)": "b39832d4",
+            "authorizePayoutOperator(address)": "30dfa9d5",
+            "revokePayoutOperator(address)": "0cd63006",
+            "cancelPayout(string)": "264b44d5",
+            "processPayout(string)": "da84e000",
+            "putFundsInSuspenseInPayout(string)": "73fb44c6",
+            "executePayout(string)": "b03a635f",
+            "rejectPayout(string,string)": "b1a1322c",
+            "isPayoutOperatorFor(address,address)": "60401581",
+            "retrievePayoutData(string)": "e83c4671"
+        },
+        "events": {
+            "0x37b873e2a280227ff2114ec5c290b4c6639c229676c828336bae981f800f4490": "event PayoutOrdered(string,address,uint256,string)",
+            "0x69c18c6887edb6881879660d9575dd93deaa7b9ae38bd8971b504412e7cf5137": "event PayoutProcessed(string)",
+            "0x3196d8e73202df6f7548a1e2abf262132f01e5d480c2284ec13e73541752dc06": "event PayoutExecuted(string)",
+            "0xd3eaa05f7ccd51fe10c51a6e431f433d302b9b528dfdb3e4d3e23629307349d5": "event PayoutRejected(string,string)"
+        }
+    },
+    "ERC2018": {
+        "selectors": [
+            "43e4a3ab",
+            "93f23ed4",
+            "73a33fbb",
+            "a315dd4e",
+            "b0aefc84",
+            "42be29e4",
+            "5c6fa317",
+            "fe1053b7",
+            "13f2aa1c",
+            "213de662"
+        ],
+        "topics": [
+            "0xb2764510bf1a7f55f95ea8f1e4e2056da71bd59e03354f27aae93eb560c7a91c",
+            "0xf8fbb2374e6e1bddd125346276f6455996adad3729475b2accd4e7ea0fff9bd4",
+            "0xcf009d32db190726fb245a5225f57c027fce2bee3fbf253baee4cac36f74a90f",
+            "0xcb435735170a2c28f0e4a405782e24c928e01fd9c04799b8a4278b1866b4e6a0"
+        ],
+        "functions": {
+            "orderTransfer(string,address,uint256)": "43e4a3ab",
+            "orderTransferFrom(string,address,address,uint256)": "93f23ed4",
+            "authorizeClearableTransferOperator(address)": "73a33fbb",
+            "revokeClearableTransferOperator(address)": "a315dd4e",
+            "cancelTransfer(string)": "b0aefc84",
+            "processClearableTransfer(string)": "42be29e4",
+            "executeClearableTransfer(string)": "5c6fa317",
+            "rejectClearableTransfer(string,string)": "fe1053b7",
+            "retrieveClearableTransferData(string)": "13f2aa1c",
+            "isClearableTransferOperatorFor(address,address)": "213de662"
+        },
+        "events": {
+            "0xb2764510bf1a7f55f95ea8f1e4e2056da71bd59e03354f27aae93eb560c7a91c": "event TransferOrdered(string,address,uint256)",
+            "0xf8fbb2374e6e1bddd125346276f6455996adad3729475b2accd4e7ea0fff9bd4": "event TransferProcessed(string)",
+            "0xcf009d32db190726fb245a5225f57c027fce2bee3fbf253baee4cac36f74a90f": "event TransferExecuted(string)",
+            "0xcb435735170a2c28f0e4a405782e24c928e01fd9c04799b8a4278b1866b4e6a0": "event TransferRejected(string,string)"
+        }
+    },
+    "ERC2019": {
+        "selectors": [
+            "f72d4b98",
+            "c636dca8",
+            "ecc5f13b",
+            "c4261983",
+            "1a17129f",
+            "2a8133c0",
+            "ba311a98",
+            "3d801f4c",
+            "e8ca5440",
+            "e3bd54ca"
+        ],
+        "topics": [
+            "0x8b18ca873bfd4dd54af8bbe86e535028679156d7c96c77f4a03731f618eaf761",
+            "0x06fc2364aac3183bbb2dae79cbb7361cc9af762601b210ff88d5c93d61d1902a",
+            "0x5fc9a4fb89ea45fd704d363f91d718278034696778acf0832d6511afbc2c6c17",
+            "0x4a90cb8fe24ee9a61e425ddf30e5ff95f9ae5e331d8f57c6e763efa89e0f1f63"
+        ],
+        "functions": {
+            "authorizeFundOperator(address)": "f72d4b98",
+            "revokeFundOperator(address)": "c636dca8",
+            "orderFund(string,uint256,string)": "ecc5f13b",
+            "orderFundFrom(string,address,uint256,string)": "c4261983",
+            "cancelFund(string)": "1a17129f",
+            "processFund(string)": "2a8133c0",
+            "executeFund(string)": "ba311a98",
+            "rejectFund(string,string)": "3d801f4c",
+            "isFundOperatorFor(address,address)": "e8ca5440",
+            "retrieveFundData(address,string)": "e3bd54ca"
+        },
+        "events": {
+            "0x8b18ca873bfd4dd54af8bbe86e535028679156d7c96c77f4a03731f618eaf761": "event FundOrdered(string,uint256,string)",
+            "0x06fc2364aac3183bbb2dae79cbb7361cc9af762601b210ff88d5c93d61d1902a": "event FundProcessed(string)",
+            "0x5fc9a4fb89ea45fd704d363f91d718278034696778acf0832d6511afbc2c6c17": "event FundExecuted(string)",
+            "0x4a90cb8fe24ee9a61e425ddf30e5ff95f9ae5e331d8f57c6e763efa89e0f1f63": "event FundRejected(string,string)"
+        }
+    },
+    "ERC1996": {
+        "selectors": [
+            "78404999",
+            "c5b670f0",
+            "8e4a5a92",
+            "da7d3d04",
+            "ec38b229",
+            "4cb0267f",
+            "c5a468c6",
+            "0b986a50",
+            "51bfb961",
+            "7649c6d1",
+            "36c8773f",
+            "c2ac5b5c"
+        ],
+        "topics": [],
+        "functions": {
+            "hold(string,address,address,uint256,uint256)": "78404999",
+            "holdFrom(string,address,address,address,uint256,uint256)": "c5b670f0",
+            "releaseHold(string)": "8e4a5a92",
+            "executeHold(string,uint256)": "da7d3d04",
+            "renewHold(string,uint256)": "ec38b229",
+            "retrieveHoldData(string)": "4cb0267f",
+            "balanceOnHold(address)": "c5a468c6",
+            "netBalanceOf(address)": "0b986a50",
+            "totalSupplyOnHold()": "51bfb961",
+            "authorizeHoldOperator(address)": "7649c6d1",
+            "revokeHoldOperator(address)": "36c8773f",
+            "isHoldOperatorFor(address,address)": "c2ac5b5c"
+        },
+        "events": {}
+    },
+    "ERC2020": {
+        "selectors": [
+            "e5a6b10f",
+            "54fd4d50",
+            "5d16eb5c",
+            "85c3a1aa",
+            "15e5a084",
+            "0d046658",
+            "d1161d74",
+            "f234a2ae",
+            "c4adbd94",
+            "a765f088",
+            "b52c4575",
+            "1023bf92",
+            "57b08c50"
+        ],
+        "topics": [],
+        "functions": {
+            "currency()": "e5a6b10f",
+            "version()": "54fd4d50",
+            "availableFunds(address)": "5d16eb5c",
+            "checkTransferAllowed(address,address,uint256)": "85c3a1aa",
+            "checkApproveAllowed(address,address,uint256)": "15e5a084",
+            "checkHoldAllowed(address,address,address,uint256)": "0d046658",
+            "checkAuthorizeHoldOperatorAllowed(address,address)": "d1161d74",
+            "checkOrderTransferAllowed(address,address,uint256)": "f234a2ae",
+            "checkAuthorizeClearableTransferOperatorAllowed(address,address)": "c4adbd94",
+            "checkOrderFundAllowed(address,address,uint256)": "a765f088",
+            "checkAuthorizeFundOperatorAllowed(address,address)": "b52c4575",
+            "checkOrderPayoutAllowed(address,address,uint256)": "1023bf92",
+            "checkAuthorizePayoutOperatorAllowed(address,address)": "57b08c50"
+        },
+        "events": {}
+    },
+    "ERC3135": {
+        "selectors": [
+            "1b0c1a62",
+            "1d143848",
+            "2ada8a32",
+            "6849cb9d",
+            "b6b55f25",
+            "f3fef3a3",
+            "fba13bd0"
+        ],
+        "topics": [],
+        "functions": {
+            "iconUrl()": "1b0c1a62",
+            "issuer()": "1d143848",
+            "claim(address,uint256,uint256,bytes)": "2ada8a32",
+            "transferIssuer(address)": "6849cb9d",
+            "deposit(uint256)": "b6b55f25",
+            "withdraw(address,uint256)": "f3fef3a3",
+            "depositBalanceOf(address)": "fba13bd0"
+        },
+        "events": {}
+    },
+    "ERC3440": {
+        "selectors": [
+            "c615fd3c",
+            "02a569e6",
+            "72c53d9b",
+            "4e82a9f0",
+            "5da61628",
+            "0ab91ba1",
+            "cb249c2f",
+            "d4c97533",
+            "811dd0e2"
+        ],
+        "topics": [
+            "artworkSigned_topic_hash"
+        ],
+        "functions": {
+            "signArtwork(uint256,bytes)": "c615fd3c",
+            "getSignature(uint256)": "02a569e6",
+            "verifySignature(uint256,bytes)": "72c53d9b",
+            "setEditionLimit(uint256,uint256)": "4e82a9f0",
+            "getEditionLimit(uint256)": "5da61628",
+            "markAsOriginal(uint256)": "0ab91ba1",
+            "isOriginal(uint256)": "cb249c2f",
+            "setArtist(address)": "d4c97533",
+            "getArtist(uint256)": "811dd0e2"
+        },
+        "events": {
+            "artworkSigned_topic_hash": "event ArtworkSigned(uint256 indexed tokenId, address indexed artist, bytes signature)"
+        }
+    },
+    "ERC3589": {
+        "selectors": [
+            "1a7efeca",
+            "a3bf277e",
+            "b8653d79",
+            "b7c8ac45"
+        ],
+        "topics": [
+            "0x7903933196979ba9f6edd8bc3d854d0db9c5a4b5b6de0f9524fc0944189997f1"
+        ],
+        "functions": {
+            "hash(uint256,address[],uint256[])": "1a7efeca",
+            "mint(address,address[],uint256[])": "a3bf277e",
+            "safeMint(address,address[],uint256[])": "b8653d79",
+            "burn(address,uint256,uint256,address[],uint256[])": "b7c8ac45"
+        },
+        "events": {
+            "0x7903933196979ba9f6edd8bc3d854d0db9c5a4b5b6de0f9524fc0944189997f1": "event AssemblyTokenMinted(uint256 indexed tokenId, address indexed to, address[] addresses, uint256[] numbers)"
+        }
+    },
+    "ERC3754": {
+        "selectors": [
+            "70a08231",
+            "6352211e",
+            "095ea7b3",
+            "081812fc",
+            "a22cb465",
+            "e985e9c5",
+            "23b872dd",
+            "42842e0e",
+            "b88d4fde"
+        ],
+        "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef",
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925",
+            "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31"
+        ],
+        "functions": {
+            "balanceOf(address)": "70a08231",
+            "ownerOf(uint256)": "6352211e",
+            "approve(address,uint256)": "095ea7b3",
+            "getApproved(uint256)": "081812fc",
+            "setApprovalForAll(address,bool)": "a22cb465",
+            "isApprovedForAll(address,address)": "e985e9c5",
+            "transferFrom(address,address,uint256)": "23b872dd",
+            "safeTransferFrom(address,address,uint256)": "42842e0e",
+            "safeTransferFrom(address,address,uint256,bytes)": "b88d4fde"
+        },
+        "events": {
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": "event Transfer(address,address,uint256)",
+            "0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925": "event Approval(address,address,uint256)",
+            "0x17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31": "event ApprovalForAll(address,address,bool)"
+        }
+    },
+    "ERC4494": {
+        "selectors": [
+            "7ac2ff7b"
+        ],
+        "topics": [],
+        "functions": {
+            "permit(address,uint256,uint256,uint8,bytes32,bytes32)": "7ac2ff7b"
+        },
+        "events": {}
+    },
+    "ERC4524": {
+        "selectors": [
+            "423f6cef",
+            "eb795549",
+            "42842e0e",
+            "b88d4fde",
+            "4fc35859"
+        ],
+        "topics": [
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
+        ],
+        "functions": {
+            "safeTransfer(address,uint256)": "423f6cef",
+            "safeTransfer(address,uint256,bytes)": "eb795549",
+            "safeTransferFrom(address,address,uint256)": "42842e0e",
+            "safeTransferFrom(address,address,uint256,bytes)": "b88d4fde",
+            "onERC20Received(address,address,uint256,bytes)": "4fc35859"
+        },
+        "events": {
+            "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef": "event Transfer(address indexed from, address indexed to, uint256 value)"
+        }
+    },
+    "ERC4675": {
+        "selectors": [
+            "095bcdb6",
+            "426a8493",
+            "fe99049a",
+            "7a5e629c",
+            "bd85b039",
+            "00fdd58e",
+            "598af9e7",
+            "a8f1602c",
+            "150b7a02"
+        ],
+        "topics": [
+            "0x9ed053bb818ff08b8353cd46f78db1f0799f31c9e4458fdb425c10eccd2efc44",
+            "0xb3fd5071835887567a0671151121894ddccc2842f1d10bedad13e0d17cace9a7",
+            "0x4a33acae7d992f0db081c1b84a84a466000d29e6393f29fe19ed0b8638e48509"
+        ],
+        "functions": {
+            "transfer(address,uint256,uint256)": "095bcdb6",
+            "approve(address,uint256,uint256)": "426a8493",
+            "transferFrom(address,address,uint256,uint256)": "fe99049a",
+            "setParentNFT(address,uint256,uint256)": "7a5e629c",
+            "totalSupply(uint256)": "bd85b039",
+            "balanceOf(address,uint256)": "00fdd58e",
+            "allowance(address,address,uint256)": "598af9e7",
+            "isRegistered(address,uint256)": "a8f1602c",
+            "onERC721Received(address,address,uint256,bytes)": "150b7a02"
+        },
+        "events": {
+            "0x9ed053bb818ff08b8353cd46f78db1f0799f31c9e4458fdb425c10eccd2efc44": "event Transfer(address,address,uint256,uint256)",
+            "0xb3fd5071835887567a0671151121894ddccc2842f1d10bedad13e0d17cace9a7": "event Approval(address,address,uint256,uint256)",
+            "0x4a33acae7d992f0db081c1b84a84a466000d29e6393f29fe19ed0b8638e48509": "event ParentNFTRegistered(address,uint256,uint256)"
+        }
+    }
+}
