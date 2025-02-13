@@ -1,11 +1,3 @@
-'''
-Author: ashokkasthuri ashokk@smu.edu.sg
-Date: 2025-02-11 16:23:21
-LastEditors: ashokkasthuri ashokk@smu.edu.sg
-LastEditTime: 2025-02-11 16:39:03
-FilePath: /ethutils/ERCclassification.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
 import pandas as pd
 import json
 
@@ -20,10 +12,8 @@ def match_erc_type(bytecode, selectors):
     Returns:
         bool: True if every selector is found in the bytecode.
     """
-    # Convert bytecode to lowercase to ensure case-insensitive search.
     bc = bytecode.lower()
     for sel in selectors:
-        # Also lower-case the selector (they are stored without "0x")
         if sel.lower() not in bc:
             return False
     return True
@@ -33,32 +23,39 @@ def main():
     with open("erc_config.json", "r") as f:
         erc_config = json.load(f)
     
-    # Read the CSV file (only the first 100 rows)
-    df = pd.read_csv("/Users/ashokk/Documents/bytecodeContracts.csv")
-    df_subset = df.head(10)
+    # List of common ERC types that we do not want to check
+    common_types = ["ERC20", "ERC721", "ERC1155", "ERC165", "ERC173", "ERC2981", "ERC3754","ERC4494", "ERC1363","ERC777", "ERC1046", "ERC223", "ERC884", "ERC4524", "ERC2021", "ERC1996", "ERC3643", "ERC4910", "ERC4955", "ERC5192", "ERC4400", "ERC5615", "ERC4906", "ERC4626"  ]
     
-    # For each row (contract), check against every ERC type.
+    # Read the CSV file (only the first 100 rows)
+    # df = pd.read_csv("/Users/ashokk/Documents/bytecodeContracts.csv")
+    df = pd.read_csv("/Users/ashokk/Downloads/deduplicated_results.csv")
+    
+    df_subset = df.head(100000).copy()  # using 100 rows
+    
     matched_erc_types = []
     for idx, row in df_subset.iterrows():
         bytecode = row["bytecode"]
         current_matches = []
         for erc_type, config in erc_config.items():
-            # Get the list of selectors from the configuration.
+            # Skip common ERC types
+            if erc_type in common_types:
+                continue
             selectors = config.get("selectors", [])
-            # If all selectors are found in the bytecode, consider it a match.
             if match_erc_type(bytecode, selectors):
                 current_matches.append(erc_type)
         matched_erc_types.append(current_matches)
     
-    # Use .loc to assign new columns
     df_subset.loc[:, "matched_erc"] = matched_erc_types
-    df_subset.loc[:, "bytecode_short"] = df_subset["bytecode"].str[:10]
+    df_subset.loc[:, "bytecode_short"] = df_subset["bytecode"].str[:40]
     
-    # Print the results (contract bytecode and matched ERC types)
-    print(df_subset[["bytecode_short", "matched_erc"]])
+    # Filter the DataFrame to only include rows where "matched_erc" is non-empty.
+    filtered_df = df_subset[df_subset["matched_erc"].apply(lambda x: len(x) > 0)]
+    
+    # Print only the first 10 characters of bytecode and matched ERC types for the filtered rows.
+    print(filtered_df[["address","bytecode_short", "matched_erc"]])
     
     # Optionally, save the results to a CSV file.
-    # df_subset.to_csv("erc_classification_results.csv", index=False)
+    filtered_df.to_csv("erc_classification_results.csv", index=False)
 
 if __name__ == "__main__":
     main()
